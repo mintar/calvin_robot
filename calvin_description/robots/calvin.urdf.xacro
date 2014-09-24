@@ -259,11 +259,11 @@
   </joint>
 
   <include filename="$(find uos_common_urdf)/urdf/kinect.urdf.xacro" />
-  <xacro:kinect camera="kinect" />
+  <xacro:kinect camera="head_mount_kinect" />
 
   <joint name="calvin_kinect_joint" type="fixed">
     <parent link="kinect_pitch_link" />
-    <child  link="kinect_link" />
+    <child  link="head_mount_kinect_link" />
     <origin xyz="${kinect_x_offset} ${kinect_y_offset} ${kinect_z_offset}" rpy="${M_PI} 0 0"/>
   </joint>
 
